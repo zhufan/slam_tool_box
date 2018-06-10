@@ -3,7 +3,8 @@ function [R, t] = se3_power_infinitesimal(phi, rho)
 %input: phi(rotation part) rho
 %ouput: R t
     R = so3_power_infinitesimal(phi);
-    t = calculate_J_infinitesimal(phi) * rho;
+    %t = calculate_J_infinitesimal(phi) * rho;
+    t = rho;
 end
 
 function [J] = calculate_J_infinitesimal(phi)
